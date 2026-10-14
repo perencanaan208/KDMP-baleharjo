@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#8E0B20">
+<title>Keuangan KDMP Baleharjo</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💰</text></svg>">
+<style>
+  html,body{height:100%;margin:0;background:#8E0B20;font-family:system-ui,"Segoe UI",Roboto,sans-serif}
+  #msg{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#fff;text-align:center;padding:24px}
+  #msg b{font-size:18px} #msg code{background:#0004;padding:2px 6px;border-radius:4px}
+  iframe{position:fixed;inset:0;width:100%;height:100%;border:0;background:transparent}
+</style>
+</head>
+<body>
+<div id="msg"><b>KOPERASI DESA MERAH PUTIH BALEHARJO</b><span id="st">Memuat aplikasi…</span></div>
+<iframe id="app" title="Keuangan KDMP Baleharjo" allow="clipboard-write" referrerpolicy="no-referrer" hidden></iframe>
+<noscript>Aktifkan JavaScript untuk membuka aplikasi.</noscript>
+<script>
+  // GANTI dengan URL Web App (akhiran /exec) dari Apps Script > Terapkan > Kelola deployment.
+  // URL ini tidak perlu diubah lagi saat Anda memperbarui kode di Apps Script.
+  const GAS_URL = 'https://script.google.com/macros/s/GANTI_DENGAN_ID_DEPLOYMENT/exec';
+
+  const f = document.getElementById('app');
+  if (/GANTI_DENGAN/.test(GAS_URL)) {
+    document.getElementById('st').innerHTML = 'Isi <code>GAS_URL</code> di <code>web/index.html</code> dengan URL Web App Anda.';
+  } else {
+    f.hidden = false;
+    f.src = GAS_URL;
+  }
+</script>
+</body>
+</html>
